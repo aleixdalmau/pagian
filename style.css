@@ -6,19 +6,13 @@
   scroll-behavior: smooth;
 }
 
-body{
+body {
   background-color: rgb(236, 236, 236);
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
-}
-
-img {
-  margin-left: 20px;
 }
 
 nav {
@@ -36,16 +30,23 @@ nav ul {
 nav ul li {
   display: inline-block;
   line-height: 150%;
+  margin-top: 25px;
   float: right;
 }
 
 nav ul li .entrar {
     color: black;
     font-size: 25px;
-    padding: 7px 15px;
-    border-radius: 15px;
+    padding: 10px 15px;
+    border-radius: 12px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+}
+
+nav ul div .imatge {
+  height: 70px;
+  margin-left: 10px;
+  margin-top: 5px;
 }
 
 .entrar:hover {
@@ -91,35 +92,26 @@ nav ul li .entrar {
   transition: 0.3s;
 }
 
-.left {
-  width: 100%;
-  height: 100vh;
+.left{
+  width: 80%;
   display: grid;
   place-items: center;
-  text-align: justify;
   padding: 5%;
-  font-size: 20px;
-  font-weight: 1000;
+  text-align: justify;
+  font-size: 5vh;
+  font-weight: bold;
 }
 
-.right {
-  width: 100%;
-  height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 5%;
-  text-align: justify;
-  font-size: 20px;
-  font-weight: 1000;
+.image{
+  width: 50%;
 }
 
 section {
-  height: 80vh;
+  height: auto;
 }
 
 .content {
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -128,17 +120,43 @@ section {
 }
 
 .noticia {
-  width: 80%; 
+  width: 80%;
   height: 50%;
   object-fit: cover;
-  object-position: 50% 50%; 
+  object-position: 50% 50%;
 }
 
-.contingut{
+.contingut {
   margin-top: 20%;
   font-size: 150%;
   text-align: center;
-  color:  white;
+  color: white;
   text-shadow: 0px 0px 7px #111;
   text-decoration: none;
+}
+
+.esq{
+  align-content: center;
+  text-align: center;
+  float: left;
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+}
+
+.drt{
+  align-content: center;
+  text-align: center;
+  float: right;
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1200px) {
+  .esq, .drt {
+    float: none;
+    width: auto; /* Reset width for responsiveness */
+    margin: 20px auto; /* Center the tables and add some margin between them */
+  }
 }
